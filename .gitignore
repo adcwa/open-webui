@@ -309,3 +309,7 @@ cypress/screenshots
 .vscode/settings.json
 pnpm-lock.yaml
 .python-version
+electron/package-lock.json
+.npmrc
+.npmrc
+.npmrc

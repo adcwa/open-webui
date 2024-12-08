@@ -1,0 +1,33 @@
+appId: com.open-webui.app
+productName: Open WebUI
+directories:
+  output: dist/installers
+  buildResources: assets
+files:
+  - build/**/*
+  - electron/**/*
+  - package.json
+extraResources:
+  - from: backend
+    to: backend
+    filter:
+      - "**/*"
+extraFiles:
+  - from: python
+    to: python
+    filter:
+      - "**/*"
+mac:
+  icon: assets/icon.icns
+  category: public.app-category.developer-tools
+  target:
+    - dmg
+win:
+  icon: assets/icon.ico
+  target:
+    - nsis
+nsis:
+  oneClick: false
+  allowToChangeInstallationDirectory: true
+  createDesktopShortcut: true
+  runAfterFinish: true 

@@ -1,0 +1,9 @@
+{
+  "name": "open-webui",
+  "version": "0.4.7",
+  "main": "main.js",
+  "type": "module",
+  "dependencies": {
+    "electron": "^28.0.0"
+  }
+} 

@@ -13,14 +13,18 @@ const config = {
 		adapter: adapter({
 			pages: 'build',
 			assets: 'build',
-			fallback: 'index.html'
-		})
+			fallback: 'index.html',
+			strict: false
+		}),
+		paths: {
+			base: ''
+		}
 	},
 	onwarn: (warning, handler) => {
 		const { code, _ } = warning;
 		if (code === 'css-unused-selector') return;
 
-		handler(warning);
+			handler(warning);
 	}
 };
 
