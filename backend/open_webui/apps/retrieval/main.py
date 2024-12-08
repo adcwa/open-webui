@@ -1492,3 +1492,12 @@ if ENV == "dev":
     @app.get("/ef/{text}")
     async def get_embeddings_text(text: str):
         return {"result": app.state.EMBEDDING_FUNCTION(text)}
+
+os.environ['HF_ENDPOINT'] = 'https://hf-mirror.com'  # 设置镜像
+
+# 或者在配置中指定
+config = {
+    'endpoint': 'https://hf-mirror.com',
+    'timeout': 100,
+    'max_retries': 5
+}

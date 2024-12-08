@@ -377,6 +377,10 @@ async def get_ollama_tags(
 @app.get("/api/version")
 @app.get("/api/version/{url_idx}")
 async def get_ollama_versions(url_idx: Optional[int] = None):
+    print("----get_ollama_versions----")
+    print("app.state.config.ENABLE_OLLAMA_API:", app.state.config.ENABLE_OLLAMA_API)
+    print("url_idx:", url_idx)
+    print("app.state.config.OLLAMA_BASE_URLS:", app.state.config.OLLAMA_BASE_URLS)
     if app.state.config.ENABLE_OLLAMA_API:
         if url_idx is None:
             # returns lowest version
